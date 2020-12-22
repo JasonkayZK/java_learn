@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+    default-init-method="init"
+    default-destroy-method="destroy">
+
+<!--
+		<bean id="helloSpring" class="learn1_hellospring.HelloSpring">
+			<property name="message" value="Hello Spring!" />
+		</bean>
+		
+		<bean id="learn2_helloWorldSingleton" class="learn2_scope.HelloWorldSingleton" scope="singleton">
+					
+		</bean>
+		
+		<bean id="learn2_helloWorldPrototype" class="learn2_scope.HelloWorldPrototype" scope="prototype">
+		
+		</bean>
+		
+		<bean id="learn3_helloWorldLifePeriod" class="learn3_lifeperiod.HelloWorldLifePeriod" scope="singleton" 
+		init-method="init" destroy-method="destroy">
+			<property name="message" value="Helloworld!"></property>
+		</bean>
+-->
+
+		<bean id="learn4_helloWorldPostProcessor" class="learn4_postprocessor.HelloWorldPostProcessor" scope="singleton">
+			<property name="message" value="Helloworld!"/>
+		</bean>
+		
+		<bean class="learn4_postprocessor.InitHelloWorldPostProcessor" />
+		
+</beans>
+    

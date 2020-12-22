@@ -1,0 +1,11 @@
+1. 阿里云Aliyun仓库地址及设置
+ 需要使用的话，要在maven的settings.xml 文件里配置mirrors的子节点，添加如下mirror：
+ 
+    <mirror>
+      <id>alimaven</id>
+      <name>aliyun maven</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+
+    有时候会报错！删除最后的空格即可！！！
